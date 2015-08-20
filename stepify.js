@@ -48,28 +48,27 @@
 		 */
 		this.setVisible = function(){
 
-			// Se ocultan todos hacia atras con respecto a la etapa actual
+			// Previous steps are hidden
 			var current = step.prev;
 			while(current){				
 				current.hide();
 				current = current.prev;
 			}
 
-			// Se ocultan todos hacia adelante con respecto a la etapa actual
+			// Steps ahead in the time line are also hidden
 			current = step.next;
 			while(current){				
 				current.hide();
 				current = current.next;
 			}
 			
-			// Se muestra el actual
+			// Step is shown
 			step.getContainer().show();
 			step.setState('DONE');		
 			step.options.visible = true;
 			
 			step.setState('CURRENT');
 			
-			// Se actualiza el paso actual con el que se está dejando activo
 			currentStep = step;
 			
 		};
