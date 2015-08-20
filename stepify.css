@@ -1,0 +1,138 @@
+ol {
+    counter-reset: item;
+    display: inline-block;
+    font: normal normal 12px/18px helvetica, arial, sans-serif;
+    margin: 20px;
+}
+
+li {
+    color: #aaa;
+    display: block;
+    float: left;
+    margin-right: 1em;
+    font-size: 11px;
+}
+
+li:before {
+    content: counter(item);
+    counter-increment: item;
+    display: inline-block;
+    text-align: center;
+    line-height: 25px;
+    width: 25px;  
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: .5em;
+    /*margin-bottom: .25em;*/
+    color: #fff;
+    font-size: 13px;
+    font-wight: bold;
+}
+
+ol.steptracker li.steptracker-done:before {
+    background-color: #297ACC;
+    font-weight: bold;
+}
+
+ol.steptracker li.steptracker-done {
+    color: #297ACC;
+    font-weight: bold;
+}
+ol.steptracker li.steptracker-todo:before {
+    color: white;
+    background-color: grey;
+    font-weight: bold;
+}
+
+ol.steptracker li.steptracker-current:before {
+    background-color: #CC7B29;
+    font-weight: bold;
+}
+
+ol.steptracker li.steptracker-current:after {
+    content:"";
+    display:block;
+    width:0;
+    border:9px solid #CC7B29;
+    border-color:transparent  transparent #CC7B29 transparent;
+    border-top-width: 0px;
+    position:absolute;
+    top:100%;
+    left:50%;
+    /*margin-left:-10px;*/
+}
+
+ol.steptracker li.steptracker-current {
+    color: #CC7B29;
+    font-weight: bold;
+    border:3px;
+    position:relative;
+    /*width:50px;*/
+    text-align:center;
+}
+
+.steptracker{
+   top: 0px;
+   margin:0px;  
+   padding: 0px 2px 5px 3px;    
+   border-width: 2px;   
+   border-bottom-width:thin;   
+   border-bottom-color:grey;
+   border-bottom-style:dashed;
+   width: 100%;
+   margin-bottom: 10px;
+   height: 28px;
+}
+
+/*ol.steptracker {
+	margin: 0;
+	padding: 0;
+	list-style-type none;
+}
+		
+ol.steptracker li {
+    display: inline-block;
+    text-align: center;
+    line-height: 3em;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+ol.steptracker li.steptracker-done {
+    color: black;
+    border-bottom: 4px solid yellowgreen;
+}
+
+ol.steptracker li.steptracker-todo {
+    color: silver; 
+    border-bottom: 4px solid silver;
+}
+
+ol.steptracker li:after {
+    content: "\00a0\00a0";
+}
+ol.steptracker li:before {
+    position: relative;
+    bottom: -2.5em;
+    float: left;
+    left: 50%;
+    line-height: 1em;
+}
+ol.steptracker li.steptracker-done:before {
+    content: "\2713";
+    color: white;
+    background-color: yellowgreen;
+    height: 1.2em;
+    width: 1.2em;
+    line-height: 1.2em;
+    border: none;
+    border-radius: 1.2em;
+}
+ol.steptracker li.steptracker-todo:before {
+    content: "\039F";
+    color: silver;
+    background-color: white;
+    font-size: 1.5em;
+    bottom: -1.6em;
+}*/
