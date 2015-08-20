@@ -44,19 +44,18 @@
 		HTMLNode.attr('class', TODO_STYLE);
 		
 		/**
-		 * Actualiza la visibilidad de las etapas dejando visible solo la actual
-		 * @step La etapa que se quiere dejar visible o como seleccionada
+		 * Sets the step visible in the "time line", hidding everything else.
 		 */
 		this.setVisible = function(){
 
-			// Se ocultan todo hacia atras con respecto a la etapa actual
+			// Se ocultan todos hacia atras con respecto a la etapa actual
 			var current = step.prev;
 			while(current){				
 				current.hide();
 				current = current.prev;
 			}
 
-			// Se ocultan todo hacia adelante con respecto a la etapa actual
+			// Se ocultan todos hacia adelante con respecto a la etapa actual
 			current = step.next;
 			while(current){				
 				current.hide();
